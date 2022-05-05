@@ -930,7 +930,7 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log(palavra)
 
         if(palavra.length == 5){
-            word = palavra
+            word = palavra.toLowerCase()
         }else{
             pegarPalavra()
         }
