@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap');
+
+@font-face {
+    font-family: 'Ninja Naruto';
+        src: url('./fonts/NinjaNaruto-YOn4.ttf') format('truetype');
+}
+@font-face {
+    font-family: "Pokemon";
+        src: local("Solid"), url('./fonts/PokemonSolid.ttf') format('truetype');
+}
+@font-face {
+    font-family: "Pokemon Contorno";
+        src: local("hollow"), url('./fonts/PokemonHollow.ttf') format('truetype');
+}
+
+
+:root {
+    --cor-preto-fundo: #00030C;
+    --cor-cinza: #1b1625;
+    --cor-branca: #e4e4e4;
+    --font-pokemon: 'Pokemon';
+    --font-pokemon-contorno: 'Pokemon Contorno';
+    --font-titulo: 'Ninja Naruto';
+    --font-jogo: 'Inter';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--cor-preto-fundo);
+    font-family: var(--font-principal);
+    font-size: 15px;
+}
+
+.header_container {
+    border-bottom: 2px solid var(--cor-cinza);
+    padding: 20px 0;
+}
+
+.titulo {
+    color: var(--cor-branca);
+    font-size: 3em;
+    text-align: center;
+    font-family: var(--font-titulo);
+}
+
+.container {
+    width: 500px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: space-evenly;
+}
+
+
+.tabuleiro-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 5px;
+    padding: 10px;
+}
+
+.square {
+    border: 2px solid var(--cor-cinza);
+    min-width: 60px;
+    min-height: 60px;
+    
+    font-size: 2.5rem;
+    font-family: var(--font-jogo);
+    color: var(--cor-branca);
+    text-transform: uppercase;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#teclado-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 500px;
+    margin: 0 auto 8px;
+    touch-action: manipulation;
+}
+
+.keyboard-row button {
+    font-family: var(--font-jogo);
+    border: 0;
+    padding: 0 0.9rem;
+    height: 58px;
+    cursor: pointer;
+    background-color: var(--cor-cinza);
+    color: var(--cor-branca);
+    flex-grow: 1;
+    text-transform: uppercase;
+    margin: 0 2px 5px 0;
+    border-radius: 4px;
+    user-select: none;
+    font-size: 1.1em;
+}
